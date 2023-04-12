@@ -2,12 +2,13 @@ package bsu.comp152;
 
 public class Main {
     public static void main(String[] args) {
-        /* Quick array test
+        /* Quick array test without a file input
         double[] mainArray = {2.0, 3.0, 5.0, 3.0, 8.0};
         for (int i = 0; i < mainArray.length; i++){
             System.out.println(mainArray[i] + " ");
         }
         arraySort(mainArray);
+        System.out.println();
         for (int i = 0; i < mainArray.length; i++){
             System.out.println(mainArray[i] + " ");
         }
