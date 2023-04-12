@@ -1,8 +1,18 @@
 package bsu.comp152;
 
 public class Main {
+
     public static void main(String[] args) {
-        /* Quick array test without a file input
+
+        // Below is a test using Josh's and Madelyne's methods on a test array
+        double[] testArray = {9,3,5,4,2,7};
+
+        arraySort(testArray);
+        System.out.println(medianValue(testArray));
+
+
+        /*
+        //Quick array test without a file input
         double[] mainArray = {2.0, 3.0, 5.0, 3.0, 8.0};
         for (int i = 0; i < mainArray.length; i++){
             System.out.println(mainArray[i] + " ");
@@ -12,8 +22,24 @@ public class Main {
         for (int i = 0; i < mainArray.length; i++){
             System.out.println(mainArray[i] + " ");
         }
+        */
 
-         */
+        /*
+        // 'Test code' to see if medianValue method works
+        double[] sortedArray = new double[6]; // number of lines in file
+
+        for (int j = 0; j < sortedArray.length; j++) {
+            sortedArray[j] = j;
+        } // populates the array with sorted numbers
+
+        for (int j = 0; j < sortedArray.length; j++) {
+            System.out.print(sortedArray[j] + ", ");
+        } // prints each number in the array, so we can see it
+        System.out.println();
+
+        System.out.println("Median Value: " + medianValue(sortedArray));
+*/
+
     }
 
     /**
@@ -42,4 +68,28 @@ public class Main {
             inputArray[i] = minValue;
         }
     }
+
+    /**
+     * Method finds the median value in an array of sorted numbers
+     * @param array - sorted array from Josh's method
+     * @return returns the median value to be entered into dataOut file
+     */
+    public static double medianValue(double[] array) {
+
+        double median;
+        int middle;
+        int sizeArray = array.length; // find size of array
+
+        // determine if it is even or odd (length%2 = 1, odd, length%2 = 0, even)
+        if (sizeArray % 2 == 0) { // if even, find middle two numbers, find their average
+            middle = sizeArray / 2;
+            median = ((array[middle] + array[middle - 1]) / 2);
+        } else { // if odd, find middle number
+            middle = sizeArray / 2;
+            median = array[middle];
+        }
+
+        return median; // Return median value (to be written to new file)
+    }
+
 }
