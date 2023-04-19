@@ -1,14 +1,18 @@
 package bsu.comp152;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         // Below is a test using Josh's and Madelyne's methods on a test array
         double[] testArray = {9,3,5,4,2,7};
 
         arraySort(testArray);
-        System.out.println(medianValue(testArray));
+        String outString = String.valueOf(medianValue(testArray));
+        System.out.println(outString);
 
 
         /*
@@ -39,6 +43,14 @@ public class Main {
 
         System.out.println("Median Value: " + medianValue(sortedArray));
 */
+        /*
+         * written by Josh Sheputa
+         */
+        //File outFile = new File("dataOut.txt");
+        FileWriter outWriter = new FileWriter("dataOut.txt");
+        outWriter.write(outString + "\n");
+        outWriter.close();
+        System.out.println("Successfully wrote to file");
 
     }
 
