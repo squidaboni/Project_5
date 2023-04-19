@@ -16,35 +16,6 @@ public class Main {
 
 
         /*
-        //Quick array test without a file input
-        double[] mainArray = {2.0, 3.0, 5.0, 3.0, 8.0};
-        for (int i = 0; i < mainArray.length; i++){
-            System.out.println(mainArray[i] + " ");
-        }
-        arraySort(mainArray);
-        System.out.println();
-        for (int i = 0; i < mainArray.length; i++){
-            System.out.println(mainArray[i] + " ");
-        }
-        */
-
-        /*
-        // 'Test code' to see if medianValue method works
-        double[] sortedArray = new double[6]; // number of lines in file
-
-        for (int j = 0; j < sortedArray.length; j++) {
-            sortedArray[j] = j;
-        } // populates the array with sorted numbers
-
-        for (int j = 0; j < sortedArray.length; j++) {
-            System.out.print(sortedArray[j] + ", ");
-        } // prints each number in the array, so we can see it
-        System.out.println();
-
-        System.out.println("Median Value: " + medianValue(sortedArray));
-*/
-
-        /*
          * written by Josh Sheputa
          */
         //File outFile = new File("dataOut.txt");
