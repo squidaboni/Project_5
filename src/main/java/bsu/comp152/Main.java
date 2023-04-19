@@ -13,7 +13,7 @@ public class Main {
         Scanner inputFile = new Scanner(myFile);
 
 
-        ArrayList<Double> numbers = new ArrayList<Double>();
+        ArrayList<Double> numbers = new ArrayList<>();
         while (inputFile.hasNext()) {
             numbers.add(inputFile.nextDouble());
         }
@@ -25,18 +25,24 @@ public class Main {
             numberArray[i] = numbers.get(i);
         }
 
-        // Below is a test using Josh's and Madelyne's methods on a test array
+        //sort the array
+        arraySort(numberArray);
+
+        /* Quick Test without data in
+        Below is a test using Josh's and Madelyne's methods on a test array
         double[] testArray = {9, 3, 5, 4, 2, 7};
 
         arraySort(testArray);
         String outString = String.valueOf(medianValue(testArray));
         System.out.println(outString);
+         */
 
 
         /*
          * written by Josh Sheputa
          */
         //File outFile = new File("dataOut.txt");
+        String outString = String.valueOf(medianValue(numberArray));
         FileWriter outWriter = new FileWriter("dataOut.txt");
         outWriter.write(outString + "\n");
         outWriter.close();
